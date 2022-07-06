@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- Title page -->
+    {% for abouts in about %}
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92"
+             style="background-image: url('{{ asset('uploads/') }}{{abouts.imagetop}}');margin-top: 89px;">
+        <h2 class="ltext-105 cl0 txt-center">
+            About
+        </h2>
+    </section>
+    {% endfor %}
+
+
+    <!-- Content page -->
+    <section class="bg0 p-t-75 p-b-120">
+        <div class="container">
+            <div class="row p-b-148">
+                <div class="col-md-7 col-lg-8">
+                    <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                        <h3 class="mtext-111 cl2 p-b-16">
+                            Notre histoire
+                        </h3>
+                        {% for abouts in about %}
+                            <p class="stext-113 cl6 p-b-26">
+                                {{ abouts.texthistoire }}
+                            </p>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+                    <div class="how-bor1 ">
+                        <div class="hov-img0">
+                            {% for abouts in about %}
+                            <img src="{{ asset('uploads/') }}{{ abouts.imagehistoire }}" alt="IMG">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="order-md-2 col-md-7 col-lg-8 p-b-30">
+                    <div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
+                        <h3 class="mtext-111 cl2 p-b-16">
+                            Notre Mission
+                        </h3>
+
+                        {% for abouts in about %}
+                            <p class="stext-113 cl6 p-b-26">
+                                {{ abouts.textservice }}
+                            </p>
+                        {% endfor %}
+
+                        <div class="bor16 p-l-29 p-b-9 m-t-22">
+                            {% for abouts in about %}
+                                <p class="stext-114 cl6 p-r-40 p-b-11">
+                                    {{ abouts.sitation }}
+                                </p>
+                            {% endfor %}
+                            {% for abouts in about %}
+                            <span class="stext-111 cl8">
+								- {{ abouts.auteur }}
+							</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-md-1 col-11 col-md-5 col-lg-4 m-lr-auto p-b-30">
+                    <div class="how-bor2">
+                        <div class="hov-img0">
+                            {% for abouts in about %}
+                            <img src="{{ asset('uploads/') }}{{ abouts.imageservice }}" alt="IMG">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
