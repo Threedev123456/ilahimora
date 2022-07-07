@@ -3,7 +3,7 @@
 {% block content %}
     <!-- Title page -->
     <section class="bg-img1 txt-center p-lr-15 p-tb-92 "
-             {% for imageTopBlog in imageTopBlogs %}
+            {% for imageTopBlog in imageTopBlogs %}
              style="background-image: url('{{ asset('uploads/') }}{{ imageTopBlog.image }}');margin-top: 89px;">
         {% endfor %}
         <h2 class="ltext-105 cl0 txt-center">
@@ -19,34 +19,35 @@
                 <div class="col-md-8 col-lg-9 p-b-80">
                     <div class="p-r-45 p-r-0-lg">
                         {% for blog in blogs %}
-                        <!-- item blog -->
-                        <div class="p-b-63">
-                            <a href="blog-detail.html" class="hov-img0 how-pos5-parent">
-                                <img src="{{ asset('uploads/') }}{{ blog.image }}" alt="IMG-BLOG" style='max-height: 470px;'>
+                            <!-- item blog -->
+                            <div class="p-b-63">
+                                <a href="blog-detail.html" class="hov-img0 how-pos5-parent">
+                                    <img src="{{ asset('uploads/') }}{{ blog.image }}" alt="IMG-BLOG"
+                                         style='max-height: 470px;'>
 
-                                <div class="flex-col-c-m size-123 bg9 how-pos5">
+                                    <div class="flex-col-c-m size-123 bg9 how-pos5">
 									<span class="ltext-107 cl2 txt-center">
 										{{ blog.jour }}
 									</span>
 
-                                    <span class="stext-109 cl3 txt-center">
+                                        <span class="stext-109 cl3 txt-center">
 										{{ blog.moisetans }}
 									</span>
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
 
-                            <div class="p-t-32">
-                                <h4 class="p-b-15">
-                                    <a href="blog-detail.html" class="ltext-108 cl2 hov-cl1 trans-04">
-                                        {{ blog.titre }}
-                                    </a>
-                                </h4>
+                                <div class="p-t-32">
+                                    <h4 class="p-b-15">
+                                        <a href="blog-detail.html" class="ltext-108 cl2 hov-cl1 trans-04">
+                                            {{ blog.titre }}
+                                        </a>
+                                    </h4>
 
-                                <p class="stext-117 cl6">
-                                    {{ blog.contenu }}
-                                </p>
+                                    <p class="stext-117 cl6">
+                                        {{ blog.contenu }}
+                                    </p>
 
-                                <div class="flex-w flex-sb-m p-t-18">
+                                    <div class="flex-w flex-sb-m p-t-18">
 									<span class="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
 										<span>
 											<span class="cl4">By</span> Admin
@@ -63,14 +64,14 @@
 										</span>
 									</span>
 
-                                    <a href="blog-detail.html" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
-                                        Continue Reading
+                                        <a href="blog-detail.html" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
+                                            Continue Reading
 
-                                        <i class="fa fa-long-arrow-right m-l-9"></i>
-                                    </a>
+                                            <i class="fa fa-long-arrow-right m-l-9"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         {% endfor %}
                         <!-- Pagination -->
                         <div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
@@ -102,12 +103,12 @@
                             </h4>
 
                             <ul>
-                                {% for categories in category%}
-                                <li class="bor18">
-                                    <a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-                                        {{ categories.titre }}
-                                    </a>
-                                </li>
+                                {% for categories in category %}
+                                    <li class="bor18">
+                                        <a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+                                            {{ categories.titre }}
+                                        </a>
+                                    </li>
                                 {% endfor %}
                             </ul>
                         </div>
@@ -118,55 +119,27 @@
                             </h4>
 
                             <ul>
-                                <li class="flex-w flex-t p-b-30">
-                                    <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                        <img src="{{ asset('assets/images/product-min-01.jpg') }}" alt="PRODUCT" style="max-width:103px;">
-                                    </a>
-
-                                    <div class="size-215 flex-col-t p-t-8">
-                                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-                                           Table de nuit 
+                                {% set z = 0 %}
+                                {% for produits in produit %}
+                                    {% set z = z+1 %}
+                                {% if z < 6 %}
+                                    <li class="flex-w flex-t p-b-30">
+                                        <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+                                            <img src="{{ asset('uploads/') }}{{ produits.image }}"
+                                                 alt="{{ produits.titre }}" style="max-width:103px;max-height: 78px;">
                                         </a>
 
-                                        <span class="stext-116 cl6 p-t-20">
+                                        <div class="size-215 flex-col-t p-t-8">
+                                            <a href="#" class="stext-116 cl8 hov-cl1 trans-04">
+                                                {{ produits.titre }}
+                                            </a>
+
+                                            <span class="stext-116 cl6 p-t-20">
 											
 										</span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w flex-t p-b-30">
-                                    <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                        <img src="{{ asset('assets/images/product-min-02.jpg') }}" alt="PRODUCT"  style="max-width:103px;">
-                                    </a>
-
-                                    <div class="size-215 flex-col-t p-t-8">
-                                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-                                                                            Table de nuit 
-
-                                        </a>
-
-                                        <span class="stext-116 cl6 p-t-20">
-											
-										</span>
-                                    </div>
-                                </li>
-
-                                <li class="flex-w flex-t p-b-30">
-                                    <a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-                                        <img src="{{ asset('assets/images/product-min-03.jpg') }}" alt="PRODUCT"  style="max-width:103px;">
-                                    </a>
-
-                                    <div class="size-215 flex-col-t p-t-8">
-                                        <a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-                                                                                       Table de nuit 
-
-                                        </a>
-
-                                        <span class="stext-116 cl6 p-t-20">
-											
-										</span>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </li>
+                                {% endif%} {% endfor %}
                             </ul>
                         </div>
 
@@ -280,25 +253,12 @@
                             </h4>
 
                             <div class="flex-w m-r--5">
+                                {% for cat in category %}
                                 <a href="#"
                                    class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-                                    Cuisine
+                                    {{ cat.titre }}
                                 </a>
-
-                                <a href="#"
-                                   class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-                                    Salon
-                                </a>
-
-                                <a href="#"
-                                   class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-                                    Bureau
-                                </a>
-
-                                <a href="#"
-                                   class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-                                    Chambre à coucher
-                                </a>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
