@@ -341,7 +341,7 @@
                         <!-- Slide2 -->
                         <div class="wrap-slick2">
                             <div class="slick2">
-                                {% for produit in produits %}
+                                {% for produit in produits|reverse %}
                                 <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                                     <!-- Block2 -->
                                     <div class="block2">
@@ -1365,7 +1365,7 @@
 
             <div class="row">
             {% set i = 0 %}
-                {% for blog in blogs %}
+                {% for blog in blogs|reverse %}
                 {% set i = i+1 %}
                 {% if i < 4 %}
                 <div class="col-sm-6 col-md-4 p-b-40 " >
