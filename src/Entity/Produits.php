@@ -22,6 +22,15 @@ class Produits
     #[ORM\Column(type: 'float')]
     private $prix;
 
+    #[ORM\Column(type: 'boolean')]
+    private $MeilleurCommande;
+
+    #[ORM\Column(type: 'boolean')]
+    private $VenteLivrer;
+
+    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'produits')]
+    private $category;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +68,42 @@ class Produits
     public function setPrix(float $prix): self
     {
         $this->prix = $prix;
+
+        return $this;
+    }
+
+    public function isMeilleurCommande(): ?bool
+    {
+        return $this->MeilleurCommande;
+    }
+
+    public function setMeilleurCommande(bool $MeilleurCommande): self
+    {
+        $this->MeilleurCommande = $MeilleurCommande;
+
+        return $this;
+    }
+
+    public function isVenteLivrer(): ?bool
+    {
+        return $this->VenteLivrer;
+    }
+
+    public function setVenteLivrer(bool $VenteLivrer): self
+    {
+        $this->VenteLivrer = $VenteLivrer;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }

@@ -321,9 +321,9 @@
                         <a class="nav-link active" data-toggle="tab" href="#best-seller" role="tab">Produit mis sur la marché</a>
                     </li>
 
-                    <li class="nav-item p-b-10">
+                    <!-- <li class="nav-item p-b-10">
                         <a class="nav-link" data-toggle="tab" href="#featured" role="tab">Types des meubles</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item p-b-10">
                         <a class="nav-link" data-toggle="tab" href="#sale" role="tab">Vente livrée</a>
@@ -392,300 +392,50 @@
                         <!-- Slide2 -->
                         <div class="wrap-slick2">
                             <div class="slick2">
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
+                                {% for produit in produits|reverse %}
+                                    {% if produit.MeilleurCommande == true %}
+                                    <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                                        <!-- Block2 -->
+                                        <div class="block2">
+                                            <div class="block2-pic hov-img0">
+                                                <img src="{{ asset('uploads/') }}{{ produit.image }}" alt="IMG-PRODUCT" style="height: 334.34px">
 
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    
-                                                </a>
-                                               
-                                                <span class="stext-105 cl3">
-													750.000Ar												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
+                                                <a href="#"
+                                                   class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                                    Aperçu rapide
                                                 </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
+                                            <link rel="stylesheet" href="./style.css">
 
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    salon
-                                                </a>
 
-                                                <span class="stext-105 cl3">
-													200.000.000Ar
-												</span>
-                                            </div>
+                                            <div class="block2-txt flex-w flex-t p-t-14">
+                                                <div class="block2-txt-child1 flex-col-l ">
+                                                    <a href="product-detail.html"
+                                                       class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                                        {{ produit.titre }}
+                                                    </a>
 
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
+                                                    <!--{<span class="stext-105 cl3">
+													{{ produit.prix }}
+												</span>}-->
+                                                </div>
+
+                                                <div class="block2-txt-child2 flex-r p-t-3">
+                                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                                        <img class="icon-heart1 dis-block trans-04"
+                                                             src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
+                                                             alt="ICON">
+                                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                                             src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
+                                                             alt="ICON">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 200 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                   
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 200 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                 
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 400 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                        
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 100 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    cuisine
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 800 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                cuisine
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 300 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -695,268 +445,50 @@
                         <!-- Slide2 -->
                         <div class="wrap-slick2">
                             <div class="slick2">
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
+                                {% for produit in produits|reverse %}
+                                    {% if produit.VenteLivrer == true %}
+                                        <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                                            <!-- Block2 -->
+                                            <div class="block2">
+                                                <div class="block2-pic hov-img0">
+                                                    <img src="{{ asset('uploads/') }}{{ produit.image }}" alt="IMG-PRODUCT" style="height: 334.34px">
 
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    
-                                                </a>
+                                                    <a href="#"
+                                                       class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                                        Aperçu rapide
+                                                    </a>
+                                                </div>
 
-                                                <span class="stext-105 cl3">
-													Ariary 900 000
-												</span>
-                                            </div>
+                                                <link rel="stylesheet" href="./style.css">
 
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                           
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
+                                                <div class="block2-txt flex-w flex-t p-t-14">
+                                                    <div class="block2-txt-child1 flex-col-l ">
+                                                        <a href="product-detail.html"
+                                                           class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                                            {{ produit.titre }}
+                                                        </a>
 
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                  
-                                                </a>
+                                                        <!--{<span class="stext-105 cl3">
+													{{ produit.prix }}
+												</span>}-->
+                                                    </div>
 
-                                                <span class="stext-105 cl3">
-													Ariary 450 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
+                                                    <div class="block2-txt-child2 flex-r p-t-3">
+                                                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                                            <img class="icon-heart1 dis-block trans-04"
+                                                                 src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
+                                                                 alt="ICON">
+                                                            <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                                                 src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
+                                                                 alt="ICON">
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                salon
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 500 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-09.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 50 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-11.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    cuisine
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 700 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-13.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    meuble 
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 600 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-15.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    Mini Silver Mesh Watch
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 400 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -966,385 +498,50 @@
                         <!-- Slide2 -->
                         <div class="wrap-slick2">
                             <div class="slick2">
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-03.jpg" alt="IMG-PRODUCT">
+                                {% for produit in produits|reverse %}
+                                    {% if produit.MeilleurCommande == true %}
+                                        <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                                            <!-- Block2 -->
+                                            <div class="block2">
+                                                <div class="block2-pic hov-img0">
+                                                    <img src="{{ asset('uploads/') }}{{ produit.image }}" alt="IMG-PRODUCT" style="height: 334.34px">
 
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
+                                                    <a href="#"
+                                                       class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                                        Aperçu rapide
+                                                    </a>
+                                                </div>
 
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    Only Check Trouser
-                                                </a>
+                                                <link rel="stylesheet" href="./style.css">
 
-                                                <span class="stext-105 cl3">
-													Ariary 150 000
-												</span>
-                                            </div>
 
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                                <div class="block2-txt flex-w flex-t p-t-14">
+                                                    <div class="block2-txt-child1 flex-col-l ">
+                                                        <a href="product-detail.html"
+                                                           class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                                            {{ produit.titre }}
+                                                        </a>
 
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-06.jpg" alt="IMG-PRODUCT">
+                                                        <!--{<span class="stext-105 cl3">
+													{{ produit.prix }}
+												</span>}-->
+                                                    </div>
 
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    Vintage Inspired Classic
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 70 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
+                                                    <div class="block2-txt-child2 flex-r p-t-3">
+                                                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                                            <img class="icon-heart1 dis-block trans-04"
+                                                                 src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
+                                                                 alt="ICON">
+                                                            <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                                                 src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
+                                                                 alt="ICON">
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-07.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    Shirt in Stretch Cotton
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 200 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-08.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    Pieces Metallic Printed
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 82 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-09.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    cuisine
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 600 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-10.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    meuble
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 320 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-11.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                    bureau
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 870 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-12.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                   chambre à coucher
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 250 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-13.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                   salon
-                                                </a>
-
-                                                <span class="stext-105 cl3">
-													Ariary 700 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                    <!-- Block2 -->
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
-                                            <img src="images/product-16.jpg" alt="IMG-PRODUCT">
-
-                                            <a href="#"
-                                               class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                                Quick View
-                                            </a>
-                                        </div>
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
-                                                <a href="product-detail.html"
-                                                   class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                                
-                                                </a>
-                                                <img src="images/
-                                                <span class="stext-105 cl3">
-													Ariary 250 000
-												</span>
-                                            </div>
-
-                                            <div class="block2-txt-child2 flex-r p-t-3">
-                                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                                    <img class="icon-heart1 dis-block trans-04"
-                                                         src="{{ asset('assets/images/icons/icon-heart-01.png') }}"
-                                                         alt="ICON">
-                                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                                         src="{{ asset('assets/images/icons/icon-heart-02.png') }}"
-                                                         alt="ICON">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
