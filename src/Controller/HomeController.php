@@ -26,7 +26,7 @@ class HomeController extends AbstractController
         $home = 1;
         
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('base.html.twig', [
             'imageTopHomes' => $imageTopHomes,
             'category' => $category,
             'produits' => $produits,

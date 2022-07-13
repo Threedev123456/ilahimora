@@ -28,10 +28,21 @@ class ProduitsCrudController extends AbstractCrudController
                 ->setBasePath('uploads')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false),
+            ImageField::new('image2')
+                ->setUploadDir('public/uploads')
+                ->setBasePath('uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false), BooleanField::new('MeilleurCommande'),
+            ImageField::new('image3')
+                ->setUploadDir('public/uploads')
+                ->setBasePath('uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
             TextField::new('titre'),
             BooleanField::new('VenteLivrer'),
             AssociationField::new('category'),
             MoneyField::new('prix')->setCurrency('EUR'),
+            BooleanField::new('MeilleurCommande'),
 
 
         ];
