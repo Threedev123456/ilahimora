@@ -12,13 +12,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/blogs', name: 'app_blog')]
     public function index(BlogRepository $blogRepository,ImageTopBlogRepository $imageTopBlogRepository, CategoryRepository $categoryRepository, ProduitsRepository $produitsRepository): Response
     {
         $produit = $produitsRepository->findAll();
         $category = $categoryRepository->findAll();
         $imageTopBlogs =$imageTopBlogRepository->findAll();
         $blogs = $blogRepository->findAll();
+
+
         return $this->render('blog/index.html.twig', [
             'blogs' => $blogs,
             'imageTopBlogs' => $imageTopBlogs,

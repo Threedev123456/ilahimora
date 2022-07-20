@@ -4,9 +4,9 @@ namespace App\Controller\Admin;
 
 use App\Entity\Blog;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -26,10 +26,11 @@ class BlogCrudController extends AbstractCrudController
                 ->setBasePath('uploads')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false),
-            IntegerField::new('jour'),
-            TextField::new('moisetans'),
+            DateField::new('date'),
             TextField::new('titre'),
             TextareaField::new('contenu'),
+            TextField::new('auteur'),
+            
         ];
     }
 

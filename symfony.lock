@@ -104,6 +104,21 @@
     "mailjet/mailjet-apiv3-php": {
         "version": "v1.5.6"
     },
+    "mailjet/mailjet-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "48a7f92015372654b5056855da5e94d54bd8d948"
+        },
+        "files": [
+            "./config/packages/mailjet.yaml"
+        ]
+    },
+    "mailjet/mailjet-swiftmailer": {
+        "version": "1.0.6"
+    },
     "monolog/monolog": {
         "version": "2.6.0"
     },
@@ -249,6 +264,9 @@
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v5.4.12"
     },
     "symfony/asset": {
         "version": "v6.0.7"
@@ -619,6 +637,9 @@
         "version": "1.2.1"
     },
     "twig/extra-bundle": {
+        "version": "v3.4.0"
+    },
+    "twig/intl-extra": {
         "version": "v3.4.0"
     },
     "twig/twig": {

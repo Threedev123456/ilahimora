@@ -16,17 +16,18 @@ class Blog
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
 
-    #[ORM\Column(type: 'integer')]
-    private $jour;
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $moisetans;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $titre;
 
     #[ORM\Column(type: 'text')]
     private $contenu;
+
+    #[ORM\Column(type: 'datetime')]
+    private $date;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $auteur;
 
     public function getId(): ?int
     {
@@ -45,29 +46,6 @@ class Blog
         return $this;
     }
 
-    public function getJour(): ?int
-    {
-        return $this->jour;
-    }
-
-    public function setJour(int $jour): self
-    {
-        $this->jour = $jour;
-
-        return $this;
-    }
-
-    public function getMoisetans(): ?string
-    {
-        return $this->moisetans;
-    }
-
-    public function setMoisetans(string $moisetans): self
-    {
-        $this->moisetans = $moisetans;
-
-        return $this;
-    }
 
     public function getTitre(): ?string
     {
@@ -89,6 +67,35 @@ class Blog
     public function setContenu(string $contenu): self
     {
         $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getId();
+    }
+
+    public function getAuteur(): ?string
+    {
+        return $this->auteur;
+    }
+
+    public function setAuteur(string $auteur): self
+    {
+        $this->auteur = $auteur;
 
         return $this;
     }
