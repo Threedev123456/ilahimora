@@ -5,8 +5,11 @@ namespace App\Controller\Admin;
 use App\Entity\About;
 use App\Entity\Blog;
 use App\Entity\Category;
+use App\Entity\Contact;
+use App\Entity\Formulaire;
 use App\Entity\ImageTopBlog;
 use App\Entity\ImageTopHome;
+use App\Entity\News;
 use App\Entity\Produits;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -48,13 +51,16 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Image Top Home', 'fas fa-list', ImageTopHome::class);
-        yield MenuItem::linkToCrud('Category','fas fa-list',Category::class);
-        yield MenuItem::linkToCrud('Production','fas fa-list',Produits::class);
-        yield MenuItem::linkToCrud('Image-Top-Blog','fas fa-list',ImageTopBlog::class);
-        yield MenuItem::linkToCrud('Blog','fas fa-list',Blog::class);
-        yield MenuItem::linkToCrud('About','fas fa-list',About::class);
+        //yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Admin', 'fas fa-user-lock', User::class);
+        yield MenuItem::linkToCrud('User', 'fas fa-user-plus', News::class);
+        yield MenuItem::linkToCrud('Commande-list','fas fa-address-book',Formulaire::class);
+        yield MenuItem::linkToCrud('Message','fas fa-sms',Contact::class);
+        yield MenuItem::linkToCrud('Image Top Home', 'fas fa-image', ImageTopHome::class);
+        yield MenuItem::linkToCrud('Category','fas fa-archive',Category::class);
+        yield MenuItem::linkToCrud('Production','fas fa-couch',Produits::class);
+        yield MenuItem::linkToCrud('Image-Top-Blog','fas fa-image',ImageTopBlog::class);
+        yield MenuItem::linkToCrud('Blog','fas fa-receipt',Blog::class);
+        yield MenuItem::linkToCrud('About','fas fa-receipt',About::class);
     }
 }

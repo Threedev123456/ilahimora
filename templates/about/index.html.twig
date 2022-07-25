@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
-{% block title %}About{% endblock %}
+{% block title %}A propos{% endblock %}
 
 {% block content %}
     <!-- Title page -->
+    {% set a =" à propos" %}
     {% for abouts in about %}
     <section class="bg-img1 txt-center p-lr-15 p-tb-92"
              style="background-image: url('{{ asset('uploads/') }}{{abouts.imagetop}}');margin-top: 89px;">
         <h2 class="ltext-105 cl0 txt-center">
-            About
+            {{a|upper}}
         </h2>
     </section>
     {% endfor %}
